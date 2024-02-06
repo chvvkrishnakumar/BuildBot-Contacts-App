@@ -58,8 +58,9 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-## Available Options 
-Deployed the site using Netlify
+## Repository and deployment
 
+You can find the repository on Github(https://github.com/chvvkrishnakumar/BuildBot-Contacts-App)
+Deployed the site using Netlify
 you can visit this link to see output (https://krishnacontacts.netlify.app/)
 this will be expired in 30days
