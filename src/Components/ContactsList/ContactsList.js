@@ -107,79 +107,91 @@ const ContactsList = () => {
             <div className="contact-list-container">
                 {contacts.length > 0 ? (
                     tableView ? (
-                        <Table
-                            className="contacts-table"
-                            dataSource={contacts}
-                            onChange={handleChange}
-                            filteredInfo={filteredInfo}
-                            pagination={false}
-                        >
-                            <Column
-                                title="Name"
-                                dataIndex="name"
-                                key="name"
-                                sorter={(a, b) => a.name.localeCompare(b.name)}
-                                sortOrder={
-                                    sortedInfo.columnKey === "name" &&
-                                    sortedInfo.order
-                                }
-                            />
-                            <Column
-                                title="Mobile Number"
-                                dataIndex="phone"
-                                key="phone"
-                                sorter={(a, b) =>
-                                    a.phone.localeCompare(b.phone)
-                                }
-                                sortOrder={
-                                    sortedInfo.columnKey === "phone" &&
-                                    sortedInfo.order
-                                }
-                            />
-                            <Column
-                                title="Email"
-                                dataIndex="email"
-                                key="email"
-                                sorter={(a, b) =>
-                                    a.email.localeCompare(b.email)
-                                }
-                                sortOrder={
-                                    sortedInfo.columnKey === "email" &&
-                                    sortedInfo.order
-                                }
-                            />
-                            <Column
-                                title="Edit"
-                                key="action"
-                                render={(_, record) => (
-                                    <EditOutlined
-                                        onClick={() => onEditContact(record)}
-                                        key="edit"
-                                        style={{ marginLeft: 8 }}
-                                    />
-                                )}
-                            />
-                            <Column
-                                title="Delete"
-                                key="action"
-                                render={(_, record) => (
-                                    <Popconfirm
-                                        title="Delete Contact"
-                                        description="Are You Sure Want To Delete"
-                                        onConfirm={() =>
-                                            onDeleteContact(record.id)
-                                        }
-                                        onCancel={null}
-                                        okText="Yes"
-                                        cancelText="No"
-                                    >
-                                        <DeleteOutlined
+                        <div className="table-container">
+                            {" "}
+                            <Table
+                                className="contacts-table"
+                                dataSource={contacts}
+                                onChange={handleChange}
+                                filteredInfo={filteredInfo}
+                                pagination={false}
+                            >
+                                <Column
+                                    style={{ fontWeight: "bold" }}
+                                    title="Name"
+                                    key="name"
+                                    render={(record) => (
+                                        <span style={{ fontWeight: "bold" }}>
+                                            {record.name}
+                                        </span>
+                                    )}
+                                    sorter={(a, b) =>
+                                        a.name.localeCompare(b.name)
+                                    }
+                                    sortOrder={
+                                        sortedInfo.columnKey === "name" &&
+                                        sortedInfo.order
+                                    }
+                                />
+                                <Column
+                                    title="Mobile Number"
+                                    dataIndex="phone"
+                                    key="phone"
+                                    sorter={(a, b) =>
+                                        a.phone.localeCompare(b.phone)
+                                    }
+                                    sortOrder={
+                                        sortedInfo.columnKey === "phone" &&
+                                        sortedInfo.order
+                                    }
+                                />
+                                <Column
+                                    title="Email"
+                                    dataIndex="email"
+                                    key="email"
+                                    sorter={(a, b) =>
+                                        a.email.localeCompare(b.email)
+                                    }
+                                    sortOrder={
+                                        sortedInfo.columnKey === "email" &&
+                                        sortedInfo.order
+                                    }
+                                />
+                                <Column
+                                    title="Edit"
+                                    key="action"
+                                    render={(_, record) => (
+                                        <EditOutlined
+                                            onClick={() =>
+                                                onEditContact(record)
+                                            }
+                                            key="edit"
                                             style={{ marginLeft: 8 }}
                                         />
-                                    </Popconfirm>
-                                )}
-                            />
-                        </Table>
+                                    )}
+                                />
+                                <Column
+                                    title="Delete"
+                                    key="action"
+                                    render={(_, record) => (
+                                        <Popconfirm
+                                            title="Delete Contact"
+                                            description="Are You Sure Want To Delete"
+                                            onConfirm={() =>
+                                                onDeleteContact(record.id)
+                                            }
+                                            onCancel={null}
+                                            okText="Yes"
+                                            cancelText="No"
+                                        >
+                                            <DeleteOutlined
+                                                style={{ marginLeft: 8 }}
+                                            />
+                                        </Popconfirm>
+                                    )}
+                                />
+                            </Table>
+                        </div>
                     ) : (
                         contacts.map((contact) => (
                             <Card

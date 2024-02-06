@@ -1,16 +1,31 @@
 .header-nav {
     display: flex;
-    background-color: #6f4898;
+    background-color: #238ba8;
     padding: 5px 10px;
     color: #fff;
     position: fixed;
+    justify-content: space-between;
+
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     align-items: center;
+    height: 60px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .header-nav > img {
     width: 120px;
-    margin-right: 38%;
+}
+.header-nav > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .header-nav {
+        justify-content: space-between;
+    }
 }

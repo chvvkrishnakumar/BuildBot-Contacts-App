@@ -5,17 +5,17 @@ contacts app is to manage contacts, and it uses [jsonplaceholder](https://jsonpl
 ## Views
 I created to types views for conatcts 
     1)You can see each contact as a card
-    2) You can see contacts as table
+    2) You can see contacts in table
 
-    In both the options are same to edit and updating records, but in table there is sorting opton in addition
+    In both, the options are same to edit and updating records, but in table there is sorting opton in addition
 
 ## APIs
+
  Used JSONPlaceholder , for testing CRUD operations (PUT, POST, DELETE). Note that records are not actually updated in jsonplaceholder.
 
  ## UI
- For creating UI components i used antDesign for faster implementation and better UI
 
- I choosed antDesign becuase i feel its easy and i understood the designs easily.
+ This project utilizes Ant Design, a React UI library, for building and styling UI components. The decision to use Ant Design was driven by its ease of use, well-established design principles, and a wide range of pre-built components that expedite the development process.
 
 
 ## Functionalities
@@ -28,14 +28,10 @@ This project provides the following functionalities:
 - Delete contacts.
 - Add new contacts.
 
- Note: All operations working fine but you didnt find the difference in data after operation beacuse of Fake APIs.
+ Note: All operations working fine but you didn't find the difference in data after operation beacuse of Fake APIs.
 
 ## Pagination
 I implemented pagination, but from these APIs i'm not getting pagable data, so even you change the data, API call will happen but you will get Same Data.
-
-
-
-
 
 ## Available Scripts
 
@@ -63,3 +59,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 
 ## Available Options 
+Deployed the site using Netlify
+
+you can visit this link to see output (https://krishnacontacts.netlify.app/)
+this will be expired in 30days

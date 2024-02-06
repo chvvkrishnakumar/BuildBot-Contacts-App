@@ -2,7 +2,7 @@
     align-items: center;
     width: 100%;
     display: flex;
-    margin-top: 80px;
+    margin-top: 60px;
     padding-top: 20px;
     flex-direction: column;
 }
@@ -12,13 +12,17 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
 }
 
 .contact-card {
     width: 350px;
     margin-top: 16;
     margin: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-card:hover {
+    scale: 1.03;
 }
 .edit-button-container {
     display: flex;
@@ -35,8 +39,17 @@
     padding: 0px;
     text-align: center;
 }
+.table-container {
+    overflow-x: auto;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
 .contacts-table {
-    width: 90%;
+    width: 100%;
+    white-space: nowrap;
 }
 .switch-tab {
     margin: 5px;

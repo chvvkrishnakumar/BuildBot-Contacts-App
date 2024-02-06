@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <nav className="header-nav">
             <img src={buildbot} alt="" logo />
-            <h1>Contacts</h1>
+            <div>
+                <h1>Contacts</h1>
+            </div>
         </nav>
     );
 };
